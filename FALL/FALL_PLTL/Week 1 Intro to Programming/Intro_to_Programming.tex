@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{pxfonts}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 08/28/17}\\
+	\textbf{Intro to Programming}\\
+\end{center}
+
+\noindent\textbf{Practice Tracing}\\ \\
+Given the following variable declarations, what is the value of each of the following independent expressions?\\
+\hspace*{0.5cm}\textbf{\texttt{int}} \texttt{a = 2, b = 7, m = 6, n = 3, o = 14 ;}\\
+\hspace*{0.5cm}\textbf{\texttt{double}} \texttt{d = 2.0;}\\
+\hspace*{0.5cm}\texttt{String c = "Fall";}\\
+\begin{itemize}
+
+	\item \texttt{a + b - m + n}
+	\item \texttt{n - a + "" + ( o - b )}
+	\item \texttt{c + d + ( b - m ) + ( o - b )}
+	\item \texttt{a * b $\%$ a + m / n}
+	\item \texttt{b / a + c + m  $\%$ n}
+	
+\end{itemize}
+
+
+\vspace*{0.5cm}
+\textbf{Practice coding}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{SumSpaced} and has the \texttt{main} method.
+	\item The program asks the user to enter non-negative integer n which is from 1 to 140 (inclusive) and prints the sum of the numbers from 1 to n broken into the sequence of individual digits.
+	\item The sum of  n integer can be calculated by the formula below:
+\begin{center}
+	$\rm\frac{\mathtt{\displaystyle}\displaystyle n \;(\;n+1\;)}{\displaystyle 2}$
+\end{center}	
+	\item You can only divide using 10 for breaking the sum into individual digit.
+	\item Several sample runs are provided for you below. Format your output to match the sample output. Note that your code should work for any value and these are just samples (you cannot hard-code your values in your code).
+\end{itemize}
+\begin{center}
+\begin{minipage}{6.5cm}
+\begin{lstlisting}[escapechar=!]
+Enter n: !\textbf{10}!
+The sum of first 10 numbers is 55
+The sum seperated by space is: 0 0 5 5
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{6.5cm}
+\begin{lstlisting}[escapechar=!]
+Enter n: !\textbf{23}!
+The sum of first 23 numbers is 276
+The sum seperated by space is: 0 2 7 6
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{6.5cm}
+\begin{lstlisting}[escapechar=!]
+Enter n: !\textbf{140}!
+The sum of first 140 numbers is 9870
+The sum seperated by space is: 9 8 7 0
+\end{lstlisting}
+\end{minipage}
+\end{center}
+	
+\end{document}

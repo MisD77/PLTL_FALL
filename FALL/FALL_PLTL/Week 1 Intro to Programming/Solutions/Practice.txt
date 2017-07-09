@@ -1,0 +1,5 @@
+a + b - m + n evaluates to 6
+n - a + "" + (o - b) evaluates to 17 
+c + d + (b - m) + (o - b) evaluates to Fall2.017
+a * b % a + m / n evaluates to 2
+b / a + c + m % n evaluates to 3Fall0

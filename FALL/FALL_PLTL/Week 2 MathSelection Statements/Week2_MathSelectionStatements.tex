@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{pxfonts}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 09/11/17}\\
+	\textbf{Selection Statements/Math}
+\end{center}
+
+\noindent\textbf{Practice Problem \#1}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{IsFactor} and that has the \texttt{main} method.
+	\item The program should ask the user to enter two integers greater than 1.
+	\item The program should determine whether the smaller of the two integers is a factor of the larger of the two integers (regardless of which order the two numbers are entered in). 
+	\item Based on whether either one is a factor of another, print out the appropriate message.
+	\item As a reminder, a factor of one number is any whole number that can divide the number into evenly. For example, 8 can divide 64 evenly, therefore 8 is a factor of 64. 
+	\item Several sample runs are provided for you below. Format your output to match the sample output.
+\end{itemize}
+\begin{center}
+\begin{minipage}{4.5cm}
+\begin{lstlisting}[escapechar=!]
+Enter the first number: !\textbf{5}!
+Enter the second number: !\textbf{65}!
+5 is a factor of 65
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{4.5cm}
+\begin{lstlisting}[escapechar=!]
+Enter the first number: !\textbf{35}!
+Enter the second number: !\textbf{2}!
+2 is not a factor of 35
+\end{lstlisting}
+\end{minipage}
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\textbf{Practice Problem \#2}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{RightAngledTriangle} and that has the \texttt{main} method.
+	\item The program should ask the user to enter three numbers \texttt{a}, \texttt{b} and \texttt{c} and check if they are the sides of right angled triangle.
+	\item Using the pythagorean theorem, you can check if it is a right angled triangle or not. If it is a right angled triangle then print \texttt{Right angled triangle} if it is not then print \texttt{Not a right angled triangle}. 
+	\item As per the theorem the sum of the square of two sides(legs) is equal to the square of the longest side(hypotenuse). 
+	\item Below is the formula given to calculate the hypotenuse and you must use Math.Sqrt and Math.pow to calculate it. check the style with prof.
+\begin{center}
+	$\rm{\mathtt{\displaystyle}\displaystyle h =  \sqrt{{\displaystyle}\displaystyle b^2 + \displaystyle p^2}}$
+\end{center}
+	\item Several sample runs are provided below. Format your output to match the sample output.
+\end{itemize}
+\begin{center}
+\begin{minipage}{4cm}
+\begin{lstlisting}[escapechar=!]
+Enter s1: !\textbf{3}!
+Enter s2: !\textbf{5}!
+Enter s3: !\textbf{4}!
+Right angled triangle
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{4.5cm}
+\begin{lstlisting}[escapechar=!]
+Enter s1: !\textbf{9}!
+Enter s2: !\textbf{5}!
+Enter s3: !\textbf{12}!
+Not a right angled triangle
+\end{lstlisting}
+\end{minipage} \\
+\vspace*{0.1cm}
+\begin{minipage}{4cm}
+\begin{lstlisting}[escapechar=!]
+Enter s1: !\textbf{4.4}!
+Enter s2: !\textbf{3.3}!
+Enter s3: !\textbf{5.5}!
+Right angled triangle
+\end{lstlisting}
+\end{minipage} 
+\end{center}	
+
+\vspace*{0.5cm}
+\noindent\textbf{Practice Problem \#3}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{EvenOrOdd} and that has the \texttt{main} method.
+	\item The program should ask the user to enter a \texttt{4} bit binary number (\texttt{1}'s \& \texttt{0}'s) and then convert it into the decimal number.
+	\item For example, if the input is \texttt{1101}, the output should be \texttt{13} (Hint: Break the number into digits and then convert each digit to a value for a single digit)
+	\item If the digits are \texttt{$n_1$}, \texttt{$n_2$}, \texttt{$n_3$} and \texttt{$n_4$}, the decimal equivalent is \texttt{8$n_1$} + \texttt{4$n_2$} + \texttt{2$n_3$} + \texttt{1$n_4$}.
+	\item After you get the decimal value of the \texttt{4} bit number, print out the value and check if the value is even or odd and print accordingly.
+	\item Several sample runs are provided for you below. Format your output to match the sample output.
+\end{itemize}
+\begin{center}
+\begin{minipage}{5.25cm}
+\begin{lstlisting}[escapechar=!]
+Enter a 4-bit integer: !\textbf{0011}!
+The decimal value of 0011 is 3
+3 is an odd number
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{5.25cm}
+\begin{lstlisting}[escapechar=!]
+Enter a 4-bit integer: !\textbf{1010}!
+The decimal value of 1010 is 10
+10 is an even number
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\end{center}	
+
+\end{document}

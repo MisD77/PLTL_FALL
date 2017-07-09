@@ -1,0 +1,159 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 02/13/17}\\
+	\textbf{Looping}
+\end{center}
+
+
+\noindent\textbf{Practice Problem \#1}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method and two method called \texttt{SumFromProduct} and \texttt{SumFactorial}.
+	\item In the main method prompt the user to enter positive  number up to 20(inclusive)for up to 5 times. It then counts and adds the positive values. 
+	\item Your prompt terminates whenever the user enters 5 number or non-positive number. You can assume that there is atleast one non zero number.
+	\item Print out the count of the positive numbers, their product.
+	\item Several sample runs are provided for you below. Your output must be formatted \textbf{exactly} like the sample runs below.
+\end{itemize}
+\begin{center}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=@]
+Enter a positive integer: @\textbf{12}@
+Enter a positive integer: @\textbf{17}@
+Enter a positive integer: @\textbf{2}@
+Enter a positive integer: @\textbf{0}@
+Number of positive numbers is: 3
+The product of positive numbers is: 408
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=@]
+Enter a positive integer: @\textbf{6}@
+Enter a positive integer: @\textbf{5}@
+Enter a positive integer: @\textbf{7}@
+Enter a positive integer: @\textbf{3}@
+Enter a positive integer: @\textbf{19}@
+Number of positive numbers is: 5
+The product of positive numbers is: 11970
+\end{lstlisting}
+\end{minipage}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=@]
+Enter a positive integer: @\textbf{356}@
+Enter a positive integer: @\textbf{-6}@
+Number of positive numbers is: 1
+The product of positive numbers is: 356
+\end{lstlisting}
+\end{minipage}
+\end{center}
+\noindent\textbf{Practice Problem \#2}
+\begin{itemize}
+	\item This is a Follow up from \texttt{Problem 1}. Write a method named \texttt{SumFromProduct} that takes an integer and returns an integer.
+	\item The method parameter is a product that you get from \texttt{Problem 1}. The method then calculates the sum of the digits in the number and returns the value.
+	\item If the sum is greater than 10(exclusive) then reduce the sum again to value between 1 and 10(inclusive) by adding the individual digits.
+	\item Several sample runs are provided for you below. Your output must be formatted \textbf{exactly} like the sample runs below.
+\end{itemize}
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & return \\
+\hline\rule{0pt}{4ex}
+\texttt{SumFromProduct(408)} & \texttt{3}\\
+\hline\rule{0pt}{4ex}
+\texttt{SumFromProduct(11970)} & \texttt{9}\\
+\hline\rule{0pt}{4ex}
+\texttt{SumFromProduct(356)} & \texttt{5}\\
+\hline
+\end{tabular}
+\end{center}
+	
+
+\noindent\textbf{Practice Problem \#3}
+\begin{itemize}
+	\item This is a follow up from \texttt{Problem 2}. Write a method named \texttt{SumFactorial} that takes an integer and returns an integer.
+	\item The input value is the sum that you get from \texttt{Problem 2}. The method then calculates and returns the factorial of the sum.
+	\item The factorial of a number \texttt{n} (called \texttt{n} factorial or \texttt{n!}) is the product of the integers from \texttt{1} up to and including \texttt{n}.
+	\item Several sample runs are provided for you below. Your output must be formatted \textbf{exactly} like the sample runs below.
+\end{itemize}
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & return \\
+\hline\rule{0pt}{4ex}
+\texttt{SumFactorial(3)} & \texttt{6}\\
+\hline\rule{0pt}{4ex}
+\texttt{SumFactorial(9)} & \texttt{362880}\\
+\hline\rule{0pt}{4ex}
+\texttt{SumFactorial(5)} & \texttt{120}\\
+\hline
+\end{tabular}
+\end{center}
+\noindent You should call \texttt{SumFromProduct} and \texttt{SumFactorial} from the main method in \texttt{Problem1} only. If you implemented your methods correctly, the outpur should match the following:
+\begin{center}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=@]
+Enter a positive integer: @\textbf{12}@
+Enter a positive integer: @\textbf{17}@
+Enter a positive integer: @\textbf{2}@
+Enter a positive integer: @\textbf{0}@
+Number of positive numbers is: 3
+The product of positive numbers is: 408
+The sum of the product is: 3
+The factorial of the sum is: 6
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=@]
+Enter a positive integer: @\textbf{6}@
+Enter a positive integer: @\textbf{5}@
+Enter a positive integer: @\textbf{7}@
+Enter a positive integer: @\textbf{3}@
+Enter a positive integer: @\textbf{19}@
+Number of positive numbers is: 5
+The product of positive numbers is: 11970
+The sum of the product is: 9
+The factorial of the sum is: 362880
+\end{lstlisting}
+\end{minipage}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=@]
+Enter a positive integer: @\textbf{356}@
+Enter a positive integer: @\textbf{-6}@
+Number of positive numbers is: 1
+The product of positive numbers is: 356
+The sum of the product is: 5
+The factorial of the sum is: 120
+\end{lstlisting}
+\end{minipage}
+\end{center}
+
+\end{document}

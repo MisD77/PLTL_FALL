@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 01/30/17}\\
+	\textbf{Selection Statements/Methods}
+\end{center}
+
+\noindent\textbf{Practice Problem \#1}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method.
+	\item Write a second method named \texttt{SumProduct} that takes two integer parameters, \texttt{a} and \texttt{b} and return a String.
+	\item The method should calculate the sum and the product  of \texttt{a} and \texttt{b}. If sum is greater than product, program should return \texttt{Sum}. Similarly, if the product is greater than sum, it should return \texttt{Product}. And if the Sum and Product are same, then return \texttt{Tie}. In all the cases, the program should display \texttt{Awesome} if the sum and product are both divisible by 8.
+	\item Several sample method calls are provided for you below. You should test your method inside the \texttt{main} method.
+\end{itemize}
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & return \\
+\hline\rule{0pt}{4ex}
+\texttt{SumProduct(5, 1)} & \texttt{Sum}\\
+\hline\rule{0pt}{4ex}
+\texttt{SumProduct(64, 32)} & \texttt{Awesome}\\
+\hline\rule{0pt}{4ex}
+\texttt{SumProduct(8, 7)} & \texttt{Product}\\
+\hline\rule{0pt}{4ex}
+\texttt{SumProduct(2, 2)} & \texttt{Tie}\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\textbf{Practice Problem \#2}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method.
+	\item Write a second method named \texttt{GetRandomNumber} that takes no parameters, and returns a random integer between 0 to 100.
+	\item Write a second method called \texttt{WeatherCheck} that accepts string \texttt{season} and  an integer \texttt{temp} and returns a String.
+	\item You should pass the value returned by \texttt{GetRandomNumber} as an integer parameter when you are calling \texttt{WeatherCheck}.
+	\item Check if the season is Fall and if:\\
+	temp is between 0-30 return \texttt{It's cold for a fall.}\\
+	temp is between 30-60 return \texttt{It's a normal temperature for fall.}\\
+	temp is more than 60 return \texttt{It's hot. I cannot believe it is fall.}\\
+
+	\item Check if the season is Winter and if:\\
+	temp is between 0-30 return \texttt{It's normal temperature for winter.}\\
+	temp is between 30-60 return \texttt{It's warm. Very nice weather.}\\
+	temp is more than 60 return \texttt{It's super-hot for winter. Do you even live in Chicago}?\\
+
+	\item Check if the season is Spring and if:\\
+	temp is between 0-30 return \texttt{It's cold for a spring}.\\
+	temp is between 30-60 return \texttt{It's a normal temperature for spring}.\\
+	temp is more than 60 return \texttt{It's hot. It appears that summer is already here.}\\
+
+	\item Check if the season is Summer and if:\\
+	temp is between 0-30 return \texttt{It's too cold for summer. Well well, here is Chicago for you}.\\
+	temp is between 30-60 return \texttt{It's cold. Is it summer yet}?\\
+	temp is more than 60 return \texttt{It's so nice. I love summer}.\\
+	\item Several sample runs are provided for you below. Your output must be formatted \textbf{exactly} like the sample runs below. Note that while your output must be formatted as below, you will not get the same results as this uses random numbers.
+
+\end{itemize}
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & return \\
+\hline\rule{0pt}{4ex}
+\texttt{WeatherCheck(Winter, 72)} & \texttt{It's super-hot for winter. Do you even live in Chicago?}\\
+\hline\rule{0pt}{4ex}
+\texttt{WeatherCheck(Spring, 35)} & \texttt{It's cold for a spring.}\\
+\hline\rule{0pt}{4ex}
+\texttt{WeatherCheck(Fall, 68)} & \texttt{It's hot. I cannot believe it's fall.}\\
+\hline\rule{0pt}{4ex}
+\texttt{WeatherCheck(Summer, 59)} & \texttt{It's cold. Is it summer yet?}\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
