@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 04/17/17}\\
+	\textbf{Review}
+\end{center}
+
+
+\noindent\underline{\textbf{Problem \#1}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+	\item Write a method named \texttt{mostFrequentAverage} that takes a 2D array of characters named \texttt{a},  The method returns a double.
+	\item The method should create an array which is the average of the columns in same index then return the most repeated average from the this array. If there is no any repetition, the return value would be \texttt{0.0}.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code.
+\end{itemize}
+
+\noindent\begin{center}
+\small
+\begin{tabular}{| l | l |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & Output\\
+\hline\rule{0pt}{4ex}
+\makecell[l]{\texttt{\textbf{int}[][] a = \{ \{{31, 888, 77, 50, 28} \},}\\ \hspace*{2.8cm}\texttt{\{ 29, 15, 555, 20, 100 \},}\\ \hspace*{2.8cm}\texttt{\{ 30, 302, 33, 80, 66 \},}\\ \hspace*{2.8cm}\texttt{\{ 32, 90, 44, 90, 232 \} \};}\\ \texttt{mostFrequentAverage(a);} } & \makecell[l]{\texttt{ 0.0 } }\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int}[][] b = \{ \{{20, 10, 8, 9}\},}\\ \hspace*{2.8cm}\texttt{\{ 49, 5, 2, 8 \},}\\ \hspace*{2.8cm}\texttt{\{ 6, 16, 41, 89 \},}\\ \hspace*{2.8cm}\texttt{\{ 5, 15, 29, 33 \} \};}\\ \texttt{mostFrequentAverage(b);} } & \makecell[l]{\texttt{ 20.0 } }\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int}[][]c = \{ \{{1, 2, 3, 4, 5} \},}\\ \hspace*{2.8cm}\texttt{\{ 4, 3, 2, 3, 9 \},}\\ \hspace*{2.8cm}\texttt{\{ 4, 2, -15, 15, 6 \},}\\ \hspace*{2.8cm}\texttt{\{ 5, 7, 24, 3, -5 \} \};}\\ \texttt{mostFrequentAverage(c);} } & \makecell[l]{\texttt{ 3.5 } }\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\underline{\textbf{Problem \#2}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+	\item Write a method named \texttt{repeatChar} that takes two parameters, an integer array \texttt{arr} and a character array \texttt{ch}, having the same length and returns a 2D array.
+	\item The returning 2D arrays is an array of elements in char array that has \texttt{arr[i]} times.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code (and use the \texttt{print2DArray} method to print out the results of calling the \texttt{repeatChar} method!).
+\end{itemize}
+
+\noindent\begin{center}
+\small
+\begin{tabular}{| c | l |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & Return Value\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int}[] x1 = \{ 4, 3, 5, 2\};}\\ \texttt{\textbf{char}[] y1 = \{ 'Q', 'W', 'r', 'b'\}; } \\ \texttt{\textbf{char}[][] z1 = repeatChar(x1, y1);}} & \makecell[l]{\texttt{\{ \{ 'Q', 'Q', 'Q', 'Q' \},}\\ \hspace*{0.4cm}\texttt{\{ 'W', 'W', 'W' \},}\\ \hspace*{0.4cm}\texttt{\{ 'r', 'r', 'r', 'r', 'r', 'r' \},}\\ \hspace*{0.4cm}\texttt{\{ 'b', 'b' \} \};} }\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int}[] x2 = \{ 5, 2, 3, 4, 1\};}\\ \texttt{\textbf{char}[] y2 = \{ '@', '!', '<', 'S', 'm'\}; } \\ \texttt{\textbf{char}[][] z2 = repeatChar(x2, y2);}} & \makecell[l]{\texttt{\{ \{ '@', '@', '@', '@', "@" \},}\\ \hspace*{0.4cm}\texttt{\{ '!', '!' \},}\\ \hspace*{0.4cm}\texttt{\{ '<', '<', '<' \},}\\ \hspace*{0.4cm}\texttt{\{ 'S', 'S', 'S', 'S' \},}\\ \hspace*{0.4cm}\texttt{\{ 'm' \} \};} }\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

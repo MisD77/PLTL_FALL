@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 02/27/17}\\
+	\textbf{Arrays/Loops}
+\end{center}
+
+\noindent\textbf{Problem \#1}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method.
+	\item Prompt the user to enter a positive integer \texttt{n} greater than 1. Assume that the user will enter the correct value. 
+	\item Then prompt the user to enter \texttt{n} integers.
+	\item Move all the 0's to the end of an array. Maintain the relative position of the other (non-zeros) array elements and print out the new array. 
+	\item You should also print out the number of \texttt{0}'s as well as the number of integers that are before \texttt{0}. If there are no \texttt{0}'s then print \texttt{"There are no zeros in the array."}
+	\item Several sample runs are provided for you below. Your output must be formatted \textbf{exactly} like the sample runs below. Use the sample usages in the \texttt{main} method to test your code 
+\end{itemize}
+\begin{center}
+\begin{minipage}{12cm}
+	\begin{lstlisting}[escapechar=$]
+	Enter n ( > 1): $\textbf{8}$
+	Enter 8 integers: $\textbf{ 0  0 3 0 2 7 0 9 }$
+	The new array with 0's at last: $\textbf{ 3 2 7 9 0 0 0 0 }$
+	There are 4 zeros in the array and there are 4 integers before them.
+	\end{lstlisting}
+\end{minipage}\\
+\begin{minipage}{12cm}
+	\begin{lstlisting}[escapechar=$]
+	Enter n ( > 1): $\textbf{7}$
+	Enter 7 integers: $\textbf{4 0 3 0 0 5 8}$
+	The new array with 0's at last: $\textbf{ 4 3 5 8 0 0 0 }$
+	There are 3 zeros in the array and there are 4 integers before them. 
+	\end{lstlisting}
+\end{minipage}\\
+\begin{minipage}{6cm}
+	\begin{lstlisting}[escapechar=$]
+	Enter n ( > 1): $\textbf{4}$
+	Enter 4 integers: $\textbf{22 6 89 4}$
+	There are no zeros in the array.
+	\end{lstlisting}
+\end{minipage}
+
+\end{center}
+\vspace*{0.5cm}
+\noindent\textbf{Problem \#2}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+	\item Write a method named \texttt{palindromeChar} that takes one parameter, a character array \texttt{a} and returns a boolean.
+	\item The program checks weather or not the given lists if char array is a palindrome or not. if the characters reads same forward and backwards the method returns \texttt{true} and if not the method returns \texttt{false}.
+	\item A palindrome is a sequence of words, numbers or any characters that is the same when written forward or backwards.
+	\item For example, an array of \textquotesingle r\textquotesingle , \textquotesingle a\textquotesingle, \textquotesingle d\textquotesingle, \textquotesingle a\textquotesingle, \textquotesingle r\textquotesingle, reads same from forward and backward so it returns \texttt{true} and prints out \texttt{It is a palindrome}. Similarly, \textquotesingle w\textquotesingle, \textquotesingle a\textquotesingle, \textquotesingle t\textquotesingle, \textquotesingle e\textquotesingle, \textquotesingle r\textquotesingle, is not a palindrome and thus return \texttt{false} and prints \texttt{It is not a palindrome}.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code.
+\end{itemize}
+\begin{center}
+\small
+\begin{tabular}{| c | c |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & Return Value \\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{char}[] a = \{ \textquotesingle r\textquotesingle,\textquotesingle a\textquotesingle,\textquotesingle c\textquotesingle,\textquotesingle e\textquotesingle,\textquotesingle c\textquotesingle,\textquotesingle a\textquotesingle,\textquotesingle r\textquotesingle \};} \\ \texttt{\textbf{boolean} a1 = palindromeChar(a)};} & \texttt{true}\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{char}[] b = \{ \textquotesingle w\textquotesingle,\textquotesingle a\textquotesingle,\textquotesingle t\textquotesingle,\textquotesingle e\textquotesingle,\textquotesingle r\textquotesingle \};} \\ \texttt{\textbf{boolean} b1 = palindromeChar(b)};} & \texttt{false}\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{char}[] c = \{ \textquotesingle f\textquotesingle,\textquotesingle o\textquotesingle,\textquotesingle o\textquotesingle,\textquotesingle f\textquotesingle,\textquotesingle a\textquotesingle,\textquotesingle a\textquotesingle,\textquotesingle r\textquotesingle \};} \\ \texttt{\textbf{boolean} c1 = palindromeChar(c)};} & \texttt{false}\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{char}[] d = \{ \textquotesingle c\textquotesingle,\textquotesingle b\textquotesingle,\textquotesingle a\textquotesingle,\textquotesingle a\textquotesingle,\textquotesingle b\textquotesingle,\textquotesingle c\textquotesingle \};} \\ \texttt{\textbf{boolean} d1 = palindromeChar(d)};} & \texttt{true}\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

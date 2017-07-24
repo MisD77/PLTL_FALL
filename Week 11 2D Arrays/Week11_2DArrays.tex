@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 04/12/17}\\
+	\textbf{2D Arrays}
+\end{center}
+
+
+\noindent\underline{\textbf{Problem \#1}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+	\item Write a method named \texttt{deepReverse} that takes one parameter, a 2-dimensional (2D) integer array named \texttt{arr} and returns a new 2D integer array.
+	\item The method should create a new array \texttt{a} such that rows and columns are the reverse of the array \texttt{arr}, such that first row of the array \texttt{arr} is the last row of the new array, second row is the second last row of the new array and so on.  
+	\item Similarly, the first column in the array \texttt{arr} is the last column in the new array, second column is the second last column in the new array and so on. See sample usage below.
+	\item Create a \texttt{printArray} method that takes a 2D integer array as a parameter and prints out the elements of each row on its own line separated by spaces.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code (and use the \texttt{printArray} method to print out the results of calling the \texttt{deepReverse} method!).
+\end{itemize}
+
+\noindent\begin{center}
+\small
+\begin{tabular}{| l | l |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & Return Value\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int}[][] arr1 = \{ \{ 1, 2 , 4, 0\},}\\ \hspace*{3.3cm}\texttt{ \{ 3, 4, 5, 6 \},}\\ \hspace*{3.3cm}\texttt{ \{ 7, 8, 9, 12 \} \};}\\ \texttt{\textbf{int}[][] a1 = deepReverse(arr1);} } & \makecell[l]{\texttt{\{ \{ 12, 9, 8, 7 \},}\\ \hspace*{0.4cm}\texttt{\{ 6, 5, 4, 3 \},}\\ \hspace*{0.4cm}\texttt{\{ 0, 4, 2, 1 \} \};} }\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int}[][] arr2 = \{ \{ 2, 8 \},}\\ \hspace*{2.6cm}\texttt{ \{ 7, 20 \}, }\\ \hspace*{2.6cm}\texttt{ \{ 9, 3 \}, }\\ \hspace*{2.6cm}\texttt{ \{ 5, 12 \} \}; }\\ \texttt{\textbf{int}[][] a2 = deepReverse(arr2);} } & \makecell[l]{\texttt{\{ \{12, 5 \},}\\ \hspace*{0.4cm}\texttt{\{ 3, 9 \},}\\ \hspace*{0.4cm}\texttt{\{20, 7 \},}\\ \hspace*{0.4cm}\texttt{\{ 8, 2 \} \};} }\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\underline{\textbf{Problem \#2}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+	\item Write a method named \texttt{isPrime} that takes one parameter, a 2-dimensional (2D) integer array named \texttt{arr} and returns a new 2D boolean array. 
+	\item The method checks for every element in 2D array if it is a prime number or not. If it is a prime, then element in boolean array at that index would be \texttt{true} else \texttt{false}.
+	\item Create a \texttt{printArray} method that takes a 2D boolean array as a parameter and prints out the elements of each row on its own line separated by spaces.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code (and use the \texttt{print2DArray} method to print out the results of calling the \texttt{isPrime} method!).
+\end{itemize}
+
+\noindent\begin{center}
+\small
+\begin{tabular}{| c | l |}
+	\hline\rule{0pt}{4ex}
+	Sample Method Usage & Return Value\\
+	\hline\rule{0pt}{5ex}
+	\makecell[l]{\texttt{\textbf{int}[][] a = \{ \{ 4, 13, 10, 3, 9 \},}\\ \hspace*{2.8cm}\texttt{\{ 14, 19, 43, 5 \},}\\ \hspace*{2.8cm}\texttt{\{ 31, 17, 40, 11 \} \};}\\ \texttt{\textbf{boolean}[][] a1 = isPrime(a);} } & \makecell[l]{\texttt{\{ \{ false, true, false, true, false \},}\\ \hspace*{0.4cm}\texttt{\{ false, true, true, true \},}\\ \hspace*{0.4cm}\texttt{\{ true, true, false, true \} \};} }\\
+	\hline\rule{0pt}{5ex}
+	\makecell[l]{\texttt{\textbf{int}[][] b = \{ \{ 89, 7, 9 \},}\\ \hspace*{2.8cm}\texttt{\{ 25, 39 \},}\\ \hspace*{2.8cm}\texttt{\{ 133, 29, 41 \} \};}\\ \texttt{\textbf{boolean}[][] b1 = isPrime(b);} } & \makecell[l]{\texttt{\{ \{ false, true, false \},}\\ \hspace*{0.4cm}\texttt{\{ false, false \},}\\ \hspace*{0.4cm}\texttt{\{true, true, true \} \};} }\\
+	\hline
+\end{tabular}
+\end{center}
+
+\end{document}

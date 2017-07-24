@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 03/11/17}\\
+	\textbf{Nested loops/Arrays}
+\end{center}
+
+
+\noindent\underline{\textbf{Problem \#1}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method. 
+	\item Write a program that asks a user to enter the length of a square greater than 1.
+	\item Prompt the user to enter the length until they enter number greater than 1.
+	\item The program should create a full Square using length.
+	\item Your output must match the sample output format \texttt{exactly}.
+
+\end{itemize}
+\begin{center}
+\begin{minipage}{8cm}
+
+\begin{lstlisting}[escapechar=$]
+Enter a square length greater than 1 ( > 1): $\textbf{5}$
+$\textbf{5 * * * 1}$
+$\textbf{* 4 * 2 *}$
+$\textbf{* * 3 * *}$
+$\textbf{* 4 * 2 *}$
+$\textbf{5 * * * 1}$
+\end{lstlisting}
+\end{minipage}
+\hspace*{.5cm}
+\begin{minipage}{8cm}
+\begin{lstlisting}[escapechar=$]
+Enter a square length greater than 1 ( > 1): $\textbf{-1}$
+Enter a square length greater than 1 ( > 1): $\textbf{1}$
+Enter a square length greater than 1 ( > 1): $\textbf{3}$
+$\textbf{3 * 1}$
+$\textbf{* 2 *}$
+$\textbf{3 * 1}$
+\end{lstlisting}
+\end{minipage}
+\end{center}
+\vspace*{0.5cm}
+\noindent\underline{\textbf{Problem \#2}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+	\item Write a method named \texttt{closestPower} that takes two parameter, an integer \texttt{n} and an integer array \texttt{a} and returns an integer.
+	\item The method should find \texttt{num} which is the value in array \texttt{a} that appears the most. If none of the value is repeated then consider the largest one as \texttt{num}.
+	\item Now that you have \texttt{num} and \texttt{n}, find the integer \texttt{i} which is the power of \texttt{n}, such that \texttt{n$^{i}$} is closest to \texttt{num} and return the value of \texttt{i}.
+	\item In case of tie, return the smaller value.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code.
+\end{itemize}
+\begin{center}
+\small
+\begin{tabular}{| l | c |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & Return Value\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int} n1 = 3;}\\ \texttt{\textbf{int}[] a1 = \{ 6, 81, 17, 12, 25, 24, 12 \}; } \\ \texttt{\textbf{int} x1 = closestPower(n1, a1);}} & \texttt{ 2 } \\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int} n2 = 4;}\\ \texttt{\textbf{int}[] a2 = \{3, 4, 5, 1, 12 , 67, 3, 1, 1 \}; } \\ \texttt{\textbf{int} x2 = closestPower(n2, a2);}} & \texttt{ 0 } \\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int} n3 = 7;}\\ \texttt{\textbf{int}[] a3 = \{ 77, 22, 185, 20, 269, 88 \}; } \\ \texttt{\textbf{int} x3 = closestPower(n3, a3);}} & \texttt{ 3 } \\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int} n4 = 2;}\\ \texttt{\textbf{int}[] a4 = \{1, 4, 24, 3, 12, 8 \}; } \\ \texttt{\textbf{int} x2 = closestPower(n4, a4);}} & \texttt{ 4 } \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

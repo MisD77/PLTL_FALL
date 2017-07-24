@@ -1,0 +1,92 @@
+
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+
+\lstset{%
+	language=Java,
+	basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+	keywordstyle=\bfseries,
+	breaklines=true,
+	commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+	columns=fullflexible,
+	frame=single,
+	showstringspaces=false,
+	tabsize=4,
+	morekeywords = {main},
+}
+
+\begin{document}
+	\begin{center}
+		\textbf{CS-200: Programming I}\\
+		\textbf{Fall 2017}\\
+		\textbf{Northeastern Illinois University}\\
+		\textbf{PLTL: Week of 02/27/17}\\
+		\textbf{Arrays/Loops}
+	\end{center}
+	
+	\noindent\textbf{Problem \#1}
+	\begin{itemize}
+		\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method. 
+		\item Write a method named \texttt{multipleOfIndices} that takes one parameter, a positive integer array \texttt{arr} and returns a boolean array. 
+		\item For every integer in the integer array, the program should check if the integer is a multiple of the index it is in, and assign the boolean as an element for boolean array at that index. Note that  if the index is \texttt{0$^{th}$} and \texttt{1$^{st}$}, then return \texttt{true} if the remainder is equal to the index when divided by 10 else return \texttt{false}.
+		
+		\item As a reminder, a number \texttt{m} is a multiple of \texttt{n} if \texttt{m} can be evenly divided into \texttt{n}. For example, \texttt{24} can be divided into \texttt{3} evenly, therefore \texttt{24} is a multiple of \texttt{3}, so the element would get a value of \texttt{true} if \texttt{24} is in a \texttt{3$^{rd}$} index.
+		
+		\item Create a \texttt{printArray} method that takes a boolean array as a parameter and prints out the elements of the array on the same line separated by a space.
+		
+		\item Several sample runs are provided for you below. Your output must be formatted \textbf{exactly} like the sample runs below. Use the sample usages in the \texttt{main} method to test your code 
+	\end{itemize}
+	\begin{center}
+		\small
+		\begin{tabular}{| c | c |}
+			\hline\rule{0pt}{4ex}
+			Sample Method Usage & Return Value \\
+			\hline\rule{0pt}{5ex}
+			\makecell[l]{\texttt{\textbf{int}[] a1 = \{ 1, 21, 5, 9, 12, -50, 47 \};} \\ \texttt{\textbf{boolean}[] b1 = multipleOfIndices(a1)};} & \texttt{\{ false, true, false, true, true, true, false \}}\\
+			\hline\rule{0pt}{5ex}
+			\makecell[l]{\texttt{\textbf{int}[] a2 = \{5, 3, 77, 34, 43\};} \\ \texttt{\textbf{boolean}[] b2 = multipleOfIndices(a2)};} & \texttt{\{ false, false, false, false, false\}}\\
+			\hline\rule{0pt}{5ex}
+			\makecell[l]{\texttt{\textbf{int}[] a3 = \{ 30, 22, 42, 8, 15, 27, 6 \};} \\ \texttt{\textbf{boolean}[] b3 = multipleOfIndices(a3)};} & \texttt{\{ true, false, true, false, false, false, true \}}\\
+			\hline\rule{0pt}{5ex}
+			\makecell[l]{\texttt{\textbf{int}[] a4 = \{ 10, 51, 34, 69, 44, 95\};} \\ \texttt{\textbf{boolean}[] b4 = multipleOfIndices(a4)};} & \texttt{\{ true, true, true, true, true, true \}}\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\vspace*{0.5cm}
+	\noindent\textbf{Problem \#2}
+	\begin{itemize}
+		\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+		\item Write a method named \texttt{greaterThanSum} that takes one parameter, an integer array \texttt{a} and returns a new integer array \texttt{x}.
+		\item  The method finds all the terms of an array \texttt{a} that are greater than the sum of all previous terms of the sequence. If there is no such elements, you can return an empty array.
+		\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code.Create a \texttt{printArray} method that takes an integer array as a parameter and prints out the elements of the array on the same line separated by a comma and space.
+	\end{itemize}
+\begin{center}
+\small
+\begin{tabular}{| l | c |}
+	\hline\rule{0pt}{4ex}
+	Sample Method Usage & Return Value\\
+	\hline\rule{0pt}{5ex}
+	\makecell[l]{\texttt{\textbf{int}[] a1 = \{ 1, 4, 16, -19, -12, 2, 5 \}; } \\ \texttt{\textbf{int}[] x1 = greaterThanSum(a1);}} & \texttt{\{1, 4, 16, 2, 5  \}} \\
+	\hline\rule{0pt}{5ex}
+	\makecell[l]{\texttt{\textbf{int}[] a2 = \{ -1, -2, -4, -12 \}; } \\ \texttt{\textbf{int}[] x2 = greaterThanSum(a2);}} & \texttt{\{ \}} \\
+	\hline\rule{0pt}{5ex}
+	\makecell[l]{\texttt{\textbf{int}[] a3 = \{  29, -10, 22, 5, -15, 19, 62\}; } \\ \texttt{\textbf{int}[] x3 = greaterThanSum(a3);}} & \texttt{\{29, 22, 62  \}} \\
+	\hline\rule{0pt}{5ex}
+	\makecell[l]{\texttt{\textbf{int}[] a4 = \{ 5, 8, 17, 50\}; } \\ \texttt{\textbf{int}[] x4 = greaterThanSum(a4);}} & \texttt{\{5, 8, 17, 50 \}} \\
+	\hline
+		\end{tabular}
+	\end{center}
+	
+\end{document}
