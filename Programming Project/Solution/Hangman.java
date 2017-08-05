@@ -22,7 +22,7 @@ public class Hangman
       //the string is converted as a list of chars
       char[] secretArray = stringToChar(secretWord);  
      
-      int guesses = 8, index = 0;
+      int guesses = 5, index = 0;
       char guessInput = ' ', decision = ' ';
       boolean occupiedBefore, letterCheck = false, winGame;
       

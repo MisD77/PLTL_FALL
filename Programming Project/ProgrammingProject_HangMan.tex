@@ -30,85 +30,170 @@
 	\textbf{Fall 2017}\\
 	\textbf{Northeastern Illinois University}\\
 	\textbf{Programming Project: Hangman}\\
-	\textbf{Due: Thursday, 12/26 at 5:00 p.m.}
+	\textbf{Due: Thursday, 12/07 at 5:00 p.m.}
 \end{center}
 
 \vspace*{0.5cm}
-\noindent\textbf{Background:}\\
-Hangman is a very popular word game with two-players. First one being a "chooser", who comes up with a secret word and the second one being "guesser" who attempts to guess this word one letter at a time. In our implementation, the computer will be a "chooser" who secretly chooses the word from word-list that will be provided to you. The rules are as follows:
+\vspace*{0.5cm}
+\noindent\textbf{Initial Instructions:}
 \begin{itemize}
-	\item For this game, you  are also provided with \texttt{words.txt} and \texttt{Hangman.java} files. \textbf{Be sure to save them in the same directory.} Open and run \texttt{Hangman.java} without making any modifications.
-	\item Inside the program, you are provided with two helper codes:  \texttt{loadwords()} and \texttt{stringToChar()}.
-	\item \texttt{loadwords()} loads an array of words from a \texttt{words.txt}file. As you can see the return type of the method is a String array, if you call the methods properly you will get String array of word-list.
-	\item \texttt{stringToChar()} takes a String, which in this case is the secretWord that your computer generates, and converts the String to a char array. 
-	\item You don't have to understand the codes inside these methods, but depending upon the requirement of the game, you have to know when and where to call these methods.
-	\item If everything is working correctly, after calling the \texttt{loadWords()},  you should see the following printed out:
+	\item You should work in groups of 2-3 individuals. Groups of more than 3 are \textbf{not} permitted.
+	\item Each group should submit ONE project write-up. It is the responsibility of each group member to ensure that their name is on the write-up.
+	\item The lab write-up should be typed! Type each question (and the question number) followed by your group's answer. \textbf{Convert your lab write-up to a .pdf.} You lose points if the write up is not in a .pdf.
+	\item You should use complete sentences and proper grammar in your write-up. Use spell-check! This counts as part of your grade.
+	\item Submit the \texttt{.pdf} and your \texttt{.java} files to D2L by the specified due date.
+	\item Each member of the group must turn in a \texttt{readable} digital copy of the peer assessment to an individual Dropbox by the assigned due date and time. The peer assessment counts as a significant part of your grade and you will receive a \textbf{zero} for that portion of the research lab grade if you do not turn it in.
+	\\ 
+\end{itemize}
+
+\noindent\textbf{Background:}\\
+Hangman is a very popular word game with two-players. First one is a "chooser", who comes up with a secret word and the second one is a "guesser", who attempts to guess the word one letter at a time. In our implementation, the computer will be a "chooser" who secretly chooses the word from a list of words that will be provided. The rules are as follows:
+\begin{itemize}
+	\item For this game, you are provided with two files: \texttt{words.txt} and \texttt{Hangman.java}. \textbf{Be sure to save them in the same directory.} Open and run \texttt{Hangman.java} without making any modifications.
+	\item Inside the program, you are provided with two methods:  \texttt{loadwords()} and \texttt{stringToChar()}.
+	\item The method \texttt{loadwords()} loads an array of words from a \texttt{words.txt} file. If you call the method correctly, you will get String array from the list of words.
+	\item The method \texttt{stringToChar()} takes a String, which is the secret word that your computer generates, and converts the String to a char array. 
+	\item You don't have to understand these methods, but you have to know when and where to call them.
+	\\
+	\\
+	\item If everything is working correctly, you should see the following printed out as you call the method \texttt{loadWords()}.
 \begin{center}
 	\begin{minipage}{9cm}
 		\texttt{Loading words from the file......}\\
 		\texttt{55909 words loaded.}\\
-		\texttt{\textendash \textendash}\\
-		\texttt{-------------------------}
+		\texttt{\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash}\\
 	\end{minipage}
 \end{center}
 
 	
 \end{itemize}
 \begin{itemize}
-	\item The computer will secretly choose a word at random from String array and show the player how many letters are in the word by displaying a sequence of blanks (underscores). 
-	\item The game must be interactive. You should let the user know the length of the secret word.
-	\item You should then ask the user to input one guess(i.e letter) per round.
-	\item The feedback should be given immediately with each guess if their guess is in the secret word or not.
-	\item  After each round, you should also display to the user the partially guessed word so far, as well as letters that the user has not guessed yet.
-	\item If the player guesses all the letters in the word, they win. 
+	\item You have to choose a word at random from the list of words and display the secret word as a sequence of blanks (underscores). 
+	\item The game must be interactive. You should let the user know the length of the word and then ask to input one guess(i.e letter) per round.
+	\item A user is allowed 5 guesses. Make sure to remind how many guesses left after each round.
+	\item You should give the feedback immediately with each guess and also display the partially guessed word, as well as letters not yet guessed.
 	\item The game ends in one of the two ways\\
 	- If the player has guessed the complete secret word, they win.\\
-	- Otherwise, if the player runs out of guesses.
-	\item In either case, the computer should stop asking for questions.
-	\item You should inform the player whether they won or lost, and reveal the entire secret word.
-	\item Assume that all the words are lowercase.
+	- Otherwise, if the player runs out of guesses, they lose.
+	\item In either case, you should inform the player whether they won or lost, and reveal the entire word.
+	\item Assume that all the words are in lowercase.
+	\item Your code should be your own - no plagiarism is permitted! You should have at least 3 methods in your code, not including the \texttt{main} method and the helper methods \texttt{loadWords() and stringToChar()}.
 \end{itemize}
-\vspace*{0.5cm}
-\noindent\textbf{Initial Instructions:}
-\begin{itemize}
-	\item You should work in groups of 2-3 individuals. Groups of more than 3 are \textbf{not} permitted.
-	\item Each group should submit ONE project write-up. It is the responsibility of each group member to ensure that their name is on the write-up.
-	\item The lab write-up should be typed! Type each question (and the question number) followed by your group's answer. \textbf{Convert your lab write-up to a .pdf.}
-	\item You should use complete sentences and proper grammar in your write-up. Use spell-check! This counts as part of your grade.
-	\item Your code should be your own - no plagiarism is permitted! You should have at least 3 methods in your code, not including the \texttt{main} method.
-	\item Submit the pdf and your .java files to D2L by the specified due date.
-	\item Each member of the group must turn in a \texttt{readable} digital copy of the peer assessment to an individual Dropbox by the assigned due date and time. The peer assessment counts as a significant part of your grade and you will receive a \textbf{zero} for that portion of the research lab grade if you do not turn it in. 
-\end{itemize}
+
 \vspace*{0.5cm}
 \noindent\textbf{Guidelines}\\
 You should adhere to the following guidelines when designing your program.
 \begin{enumerate}
-	\item A user is allowed 8 guesses. Make sure to remind the user of how many guesses s/he has left after each round. 
-	\item You should prompt the player for input with the following prompt:\\
-	\texttt{"You have 8 guesses left"}\\
+	\item You should prompt the player for input with the following message:\\
+	\texttt{"You have 5 guesses left"}\\
 	\texttt{"Please guess a letter: "}
-	\item A user loses a guess only when s/he guesses incorrectly.
-	\item If the user guesses the same letter twice, do not take away a guess - instead, print a message as:\\
-	\texttt{"Oops! You've already guessed that letter"}
-	displaying the word to let them know that they've already guessed that letter and prompt them to try again.\\
+	\item A user loses a guess only when they guess incorrectly.
+	\item If they guess the same letter twice, do not take away a guess - instead, print message as:\\
+	\texttt{"Oops! You've already guessed that letter"} displaying the word to let them know that they've already guessed that letter and prompt again.\\
 	\item If the user enters a correct letter then print out the message:\\
 	\texttt{"Good guess"}
-	\item If the user enters an incorrect letter then print out:\\
-	\texttt{"Oops! That letter is not in my word"}
+	\item If the user enters an incorrect one then print out:\\
+	\texttt{"Oops!That letter is not in my word"}
 	\item The word should be printed out following each guess to show the user(s) the remaining letters to guess.
-	\item If the user guesses all the letters of the secret word then print out the message:\\ 
+	\item If the user guesses all the letters of the word then print out the message:\\ 
 	\texttt{"Congratulations, you won!"}
 	\item On the other hand, if the user runs out of guesses, then display:\\ 
-	\texttt{"Sorry, you ran out of guesses.The word was secretWord."}
+	\texttt{"Sorry, you ran out of guesses.The word was X X X X X X "}\\
+	\item The winning game should look like this:
+	
+	\begin{center}
+		\begin{minipage}{14cm}
+			\texttt{Loading word list from file...\\
+			55900 words loaded.\\
+			Welcome to the game, Hangman!\\
+			I am thinking of a word that is 4 letters long. }\\
+			\texttt{\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash}\\
+			\texttt{You have 5 guesses left.\\
+			Please guess a letter: a\\
+			Good guess:  \_ a \_ \_ }\\
+			\texttt{\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash}\\
+			\texttt{You have 5 guesses left.\\
+			Please guess a letter: a\\
+			Oops! You've already guessed that letter:  \_ a \_ \_ }\\ 
+			\texttt{\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash}\\
+			\texttt{You have 5 guesses left.\\
+			Please guess a letter: s\\
+			Oops! That letter is not in my word: \_ a \_ \_}\\
+			\texttt{\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash}\\
+			\texttt{You have 4 guesses left.\\
+			Please guess a letter: t\\
+			Good guess:  t a \_ t}\\
+			\texttt{\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash}\\
+			\texttt{You have 4 guesses left.\\
+			Please guess a letter: r \\
+			Oops! That letter is not in my word: t a \_ t}\\
+			\texttt{\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash}\\
+			\texttt{You have 3 guesses left.\\
+			Please guess a letter: m\\
+			Oops! That letter is not in my word: t a \_ t}\\
+			\texttt{\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash}\\
+			\texttt{You have 2 guesses left.\\
+			Please guess a letter: c\\
+			Good guess: t a c t }\\
+			\texttt{\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash}\\
+			\texttt{Congratulations, you won!}\\	
+			\\
+			\\
+		\end{minipage}
+	\end{center}
+	\item Similarly, the losing game should look like this:\\
+	\begin{center}
+		\begin{minipage}{14cm}
+			\texttt{Loading word list from file...\\
+				55900 words loaded.\\
+				Welcome to the game Hangman!\\
+				I am thinking of a word that is 4 letters long\\
+				\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \\
+				}
+				\texttt{You have 5 guesses left \\
+				Please guess a letter: a \\
+				Oops! That letter is not in my word: \_ \_ \_ \_ \\
+				\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \\	
+				}
+				\texttt{You have 4 guesses left\\
+				Please guess a letter: b\\
+				Oops! That letter is not in my word: \_ \_ \_ \_ \\	    \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \\
+				}
+				\texttt{You have 3 guesses left\\
+				Please guess a letter: c\\
+				Oops! That letter is not in my word: \_ \_ \_ \_ \\
+				\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \\
+				}
+				\texttt{You have 2 guesses left\\
+				Please guess a letter: d\\
+				Oops! That letter is not in my word: \_ \_ \_ \_ \\
+				\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \\
+				}
+				\texttt{You have 1 guesses left \\
+				Please guess a letter: e \\
+				Good guess: e \_ \_ e \\
+				\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \\
+			    }
+		    	\texttt{You have 1 guesses left \\
+				Please guess a letter: f \\
+				Oops! That letter is not in my word: e \_ \_ e \\
+				\textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \textendash \\
+				}
+				\texttt{Sorry, you ran out of guesses. The word was e l s e. }\\
+		\end{minipage}
+	\end{center}
 	\item Your output should be easy to read and You will be graded on usability of the program.
-	\item You should thoroughly test all aspects of the program. You will be graded on the correctness of your program.
+	\item It is very important, when programming, to consider the usability of your program. If users find your program difficult to understand or operate, they won't use it! 
+	\item When inserting underscores into your word, it is a good idea to add at least a space after each one, so it's clear to the user how many unguessed letters are left in the string \textbf{(compare the readability of \_\_\_\_\_ with \_ \_ \_ \_ \_ )}.
+	\item You should thoroughly test all aspects of the program. You will be graded on the correctness of your program.\\
+	\\
 \end{enumerate}
 \vspace*{0.5cm}
 \noindent\textbf{Project write-up questions}\\
 Answer the following questions in your lab write-up. Make sure to include each question in the write-up followed by your group's answer.
 
 \vspace*{0.5cm}
-\noindent\textbf{Q1:} Create a flow chart - a graphical representation of the sequence of steps needed to implement the Hangman algorithm. For additional information and details on flow charts, see the following sites: \\
+\noindent\textbf{Q1:} Create a flow chart - a graphical representation of the sequence of steps needed to implement the Hangman algorithm. Flow chart needs to be inside the lab-write up and not \textbf{hand-written}. For additional information and details on flow charts, see the following sites: \\
 \url{http://www.computerhope.com/jargon/f/flowchar.htm}\\
 \url{http://users.evtek.fi/~jaanah/IntroC/DBeech/3gl_flow.htm} 
 
