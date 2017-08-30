@@ -23,7 +23,7 @@ public class Problem1
       int sum = SumFromProduct(product);
       int factorial = SumFactorial(sum);
       System.out.println("The sum of the product is: "+ sum);
-      System.out.println("The factorial of the sum is: "+ factorial);
+      System.out.println("The factorial of "+sum + " is: "+ factorial);
    }
    
    public static int SumFromProduct(int n)
